@@ -1,0 +1,8 @@
+apache-tomcat-8.5.51/*
+*/*.zip
+*/*.jar
+*/*.doc
+**/build
+.gitignore
+**/dist/
+**/nbproject/private/
