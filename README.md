@@ -23,5 +23,12 @@ Steps to get it work:
 - build: mvn package;
 - prepare ROOT dir: delete the existing ROOT directory under $TOMCAT_HOME/webapps (if it exists);
 - copy target/blog-1.0-SNAPSHOT.war to $TOMCAT_HOME/webapps/ROOT.war.
-- adjust $TOMCAT_HOME/conf/server.xml with "<Context docBase="ROOT" path="/" reloadable="true"/>" inside Host if it is not set;
+- adjust $TOMCAT_HOME/conf/server.xml with "/\<Context docBase="ROOT" path="/" reloadable="true"/\>" inside Host if it is not set;
 - start tomcat: $ bash $TOMCAT_HOME/bin/startup.sh
+
+Using docker:
+- cd to testsAutomation
+- docker build -t blog ./
+- run -d -p 8080:8080 -it blog
+
+That's it! Now tou can access you blog using http://localhost:8080/.
