@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:ctx="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+    <ctx:component-scan base-package="ua.edu.sumdu"/>
+    <tx:annotation-driven transaction-manager="myTransactionManager"/>
+    
+    <beans:bean id="myTransactionManager"
+        class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <beans:property name="sessionFactory" ref="sessionFactory" />
+    </beans:bean>
+
+    <beans:bean id="sessionFactory"
+        class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <beans:property name="dataSource" ref="myDataSource" />
+        <beans:property name="packagesToScan" value="ua.edu.sumdu.blog.model" />
+        <beans:property name="hibernateProperties">
+            <beans:props>
+                <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
+                <beans:prop key="hibernate.show_sql">true</beans:prop>
+            </beans:props>
+        </beans:property>
+    </beans:bean>
+    
+    <beans:bean id="myDataSource"
+        class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <beans:property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <beans:property name="jdbcUrl" value="jdbc:mysql://localhost:3306/blog" />
+        <beans:property name="user" value="root" />
+        <beans:property name="password" value="PassW00rd!" />
+        <beans:property name="minPoolSize" value="5" />
+        <beans:property name="maxPoolSize" value="10" />
+        <beans:property name="maxIdleTime" value="30000" />
+    </beans:bean>
+</beans:beans>

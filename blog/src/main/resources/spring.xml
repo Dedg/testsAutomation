@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="UserService" class="ua.edu.sumdu.blog.service.UserService"></bean>
+    <bean id="PostService" class="ua.edu.sumdu.blog.service.PostService"></bean>
+    <bean id="PasswordEncoder" class="ua.edu.sumdu.blog.util.PasswordEncoder"></bean>
+    <bean id="RegistrationForm" class="ua.edu.sumdu.blog.form.RegistrationForm"></bean>
+</beans>

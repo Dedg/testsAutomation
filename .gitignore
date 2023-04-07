@@ -6,3 +6,4 @@ apache-tomcat-8.5.51/*
 .gitignore
 **/dist/
 **/nbproject/private/
+/blog/target/
