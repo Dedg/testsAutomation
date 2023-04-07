@@ -13,7 +13,7 @@ To run web applications, it is needed to install the following:
 - [Java 17+](https://www.oracle.com/java/technologies/downloads/#jdk17-linux)
 - [Maven](https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip)
 - [MySQL](https://dev.mysql.com/downloads/mysql/5.5.html?os=31&version=5.1)
-- [Apache Tomcat] (https://tomcat.apache.org/)
+- [Apache Tomcat](https://tomcat.apache.org/)
 
 Steps to get it work:
 - clone repo: git clone https://github.com/Dedg/testsAutomation.git
