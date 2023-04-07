@@ -29,6 +29,6 @@ Steps to get it work:
 Using docker:
 - cd to testsAutomation
 - docker build -t blog ./
-- docker run -d -p 8080:8080 -it blog
+- run -d -p 8080:8080 -it blog
 
-That's it! Now you can access your blog using http://localhost:8080/.
+That's it! Now tou can access you blog using http://localhost:8080/.
