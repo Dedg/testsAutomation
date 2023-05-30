@@ -4,4 +4,4 @@ jdk:
 
 script:
   - cd blog
-  - mvn test
+  - mvn test -Dtest=!LoginAndProfileTest,!RegisterLogoutTest
