@@ -3,4 +3,5 @@ jdk:
   - openjdk17
 
 script:
+  - cd blog
   - mvn test
