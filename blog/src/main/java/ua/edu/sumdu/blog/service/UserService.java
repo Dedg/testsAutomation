@@ -92,4 +92,12 @@ public class UserService {
     public void update(User user) {
         userDao.update(user);
     }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public void setPasswordResetTokenDao(PasswordResetTokenDao passwordResetTokenDao) {
+        this.passwordResetTokenDao = passwordResetTokenDao;
+    }
 }
