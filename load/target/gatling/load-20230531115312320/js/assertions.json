@@ -1,0 +1,10 @@
+{
+  "simulation": "Load",
+  "simulationId": "load-20230531115312320",
+  "start": 1685533992734,
+  "description": "",
+  "scenarios": ["Scenario 1", "Scenario 2", "Scenario 3", "Scenario 4"],
+  "assertions": [
+
+  ]
+}
